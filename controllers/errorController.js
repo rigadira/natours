@@ -60,14 +60,14 @@ const sendErrorProd = (err, req, res) => {
   }
   if (err.isOperational) {
     return res.status(err.statusCode).render('error', {
-      title: 'Something wnt wrong!',
+      title: 'Something went wrong!',
       msg: err.message,
     });
   }
   console.log('Error 🔥', err);
 
   return res.status(err.statusCode).render('error', {
-    title: 'Something wnt wrong!',
+    title: 'Something went wrong!',
     msg: 'Please try again',
   });
 };
